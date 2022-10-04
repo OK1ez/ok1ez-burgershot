@@ -740,208 +740,198 @@ CreateThread(function()
           distance = 1.5
       })
   end
+  for k, v in pairs(Config.Locations["frypotato"]) do
+    exports['qb-target']:AddBoxZone("Frypotato_"..k, vector3(v.x, v.y, v.z), 2.4, 1, {
+        name = "Frypotato_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.6,
+        maxZ = v.z + 0.4,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:fryfries",
+                icon = "fas fa-circle",
+                label = Lang:t("target.fryfries"),
+                job = "burgershot",
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["storage"]) do
+    exports['qb-target']:AddBoxZone("Storage_"..k, vector3(v.x, v.y, v.z), 4.7, 1.3, {
+        name = "Storage_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:storage",
+                icon = "fas fa-box",
+                label = Lang:t("target.storage"),
+                job = "burgershot",
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["payment"]) do
+    exports['qb-target']:AddBoxZone("Payment_"..k, vector3(v.x, v.y, v.z), 0.5, 0.5, {
+        name = "Payment_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "jim-payments:client:Charge",
+                icon = "fas fa-cash-register",
+                label = Lang:t("target.chargecustomer"),
+                job = "burgershot",
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["payment"]) do
+    exports['qb-target']:AddBoxZone("Payment_"..k, vector3(v.x, v.y, v.z), 0.5, 0.5, {
+        name = "Payment_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "jim-payments:client:Charge",
+                icon = "fas fa-cash-register",
+                label = Lang:t("target.chargecustomer"),
+                job = "burgershot",
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["tray1"]) do
+    exports['qb-target']:AddBoxZone("Tray1_"..k, vector3(v.x, v.y, v.z), 1.0, 1.0, {
+        name = "Tray1_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.4,
+        maxZ = v.z + 0.4,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:tray",
+                icon = "fas fa-clipboard",
+                label = Lang:t("target.tray"),
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["tray2"]) do
+    exports['qb-target']:AddBoxZone("Tray2_"..k, vector3(v.x, v.y, v.z), 1.0, 1.0, {
+        name = "Tray2_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.4,
+        maxZ = v.z + 0.4,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:tray1",
+                icon = "fas fa-clipboard",
+                label = Lang:t("target.tray"),
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["soda"]) do
+    exports['qb-target']:AddBoxZone("Soda_"..k, vector3(v.x, v.y, v.z), 2.2, 1.2, {
+        name = "Soda_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:drinks",
+                icon = "fas fa-circle",
+                label = Lang:t("target.drinks"),
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["makeburger"]) do
+    exports['qb-target']:AddBoxZone("Makeburger_"..k, vector3(v.x, v.y, v.z), 5.2, 1, {
+        name = "Makeburger_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:makeburger",
+                icon = "fas fa-burger",
+                label = Lang:t("target.burger"),
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["cutingredients"]) do
+    exports['qb-target']:AddBoxZone("Cutingredients_"..k, vector3(v.x, v.y, v.z), 2.4, 1, {
+        name = "Cutingredients_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:cutingredients",
+                icon = "fas fa-circle",
+                label = Lang:t("target.ingredients"),
+            },
+        },
+        distance = 1.3
+    })
+end
+for k, v in pairs(Config.Locations["fridge"]) do
+    exports['qb-target']:AddBoxZone("Fridge_"..k, vector3(v.x, v.y, v.z), 2.8, 1, {
+        name = "Fridge_"..k,
+        heading = 33,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.8,
+        maxZ = v.z + 0.8,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ok1ez-burgershot:client:fridge",
+                icon = "fas fa-circle",
+                label = Lang:t("target.fridge"),
+            },
+        },
+        distance = 1.3
+    })
+end
 end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["frypotato"]) do
-        exports['qb-target']:AddBoxZone("Frypotato_"..k, vector3(v.x, v.y, v.z), 2.4, 1, {
-            name = "Frypotato_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.6,
-            maxZ = v.z + 0.4,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:fryfries",
-                    icon = "fas fa-circle",
-                    label = Lang:t("target.fryfries"),
-                    job = "burgershot",
-                },
-            },
-            distance = 1.3
-        })
-    end
-  end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["storage"]) do
-        exports['qb-target']:AddBoxZone("Storage_"..k, vector3(v.x, v.y, v.z), 4.7, 1.3, {
-            name = "Storage_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.8,
-            maxZ = v.z + 0.8,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:storage",
-                    icon = "fas fa-box",
-                    label = Lang:t("target.storage"),
-                    job = "burgershot",
-                },
-            },
-            distance = 1.3
-        })
-    end
-  end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["payment"]) do
-        exports['qb-target']:AddBoxZone("Payment_"..k, vector3(v.x, v.y, v.z), 0.5, 0.5, {
-            name = "Payment_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.8,
-            maxZ = v.z + 0.8,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "jim-payments:client:Charge",
-                    icon = "fas fa-cash-register",
-                    label = Lang:t("target.chargecustomer"),
-                    job = "burgershot",
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["tray1"]) do
-        exports['qb-target']:AddBoxZone("Tray1_"..k, vector3(v.x, v.y, v.z), 1.0, 1.0, {
-            name = "Tray1_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.4,
-            maxZ = v.z + 0.4,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:tray",
-                    icon = "fas fa-clipboard",
-                    label = Lang:t("target.tray"),
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["tray2"]) do
-        exports['qb-target']:AddBoxZone("Tray2_"..k, vector3(v.x, v.y, v.z), 1.0, 1.0, {
-            name = "Tray2_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.4,
-            maxZ = v.z + 0.4,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:tray1",
-                    icon = "fas fa-clipboard",
-                    label = Lang:t("target.tray"),
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["soda"]) do
-        exports['qb-target']:AddBoxZone("Soda_"..k, vector3(v.x, v.y, v.z), 2.2, 1.2, {
-            name = "Soda_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.8,
-            maxZ = v.z + 0.8,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:drinks",
-                    icon = "fas fa-circle",
-                    label = Lang:t("target.drinks"),
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["makeburger"]) do
-        exports['qb-target']:AddBoxZone("Makeburger_"..k, vector3(v.x, v.y, v.z), 5.2, 1, {
-            name = "Makeburger_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.8,
-            maxZ = v.z + 0.8,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:makeburger",
-                    icon = "fas fa-burger",
-                    label = Lang:t("target.burger"),
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["cutingredients"]) do
-        exports['qb-target']:AddBoxZone("Cutingredients_"..k, vector3(v.x, v.y, v.z), 2.4, 1, {
-            name = "Cutingredients_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.8,
-            maxZ = v.z + 0.8,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:cutingredients",
-                    icon = "fas fa-circle",
-                    label = Lang:t("target.ingredients"),
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-CreateThread(function()
-    for k, v in pairs(Config.Locations["fridge"]) do
-        exports['qb-target']:AddBoxZone("Fridge_"..k, vector3(v.x, v.y, v.z), 2.8, 1, {
-            name = "Fridge_"..k,
-            heading = 33,
-            debugPoly = Config.Debug,
-            minZ = v.z - 0.8,
-            maxZ = v.z + 0.8,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "ok1ez-burgershot:client:fridge",
-                    icon = "fas fa-circle",
-                    label = Lang:t("target.fridge"),
-                },
-            },
-            distance = 1.3
-        })
-    end
-end)
-
-
-
