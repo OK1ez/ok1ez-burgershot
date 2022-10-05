@@ -142,7 +142,7 @@ Copy this snippet and past it here. **qb-core/shared/jobs**
                 name = 'Employee',
                 payment = 500
             },
-			['1'] = {
+	    ['1'] = {
                 name = 'Chef',
                 payment = 650
             },
