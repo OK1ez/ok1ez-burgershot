@@ -157,9 +157,17 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
             }
         },
         {
+            header = "Raw Patty",
+            icon = "rawpatty",
+            txt = "Raw meat perfect for burger",
+            params = {
+                event = "ok1ez-burgershot:client:getbun",
+            }
+        },
+        {
             header = "Bun",
             icon = "bun",
-            txt = "Cut the tomato into pieces",
+            txt = "The amazing bun for an amazing burger",
             params = {
                 event = "ok1ez-burgershot:client:getbun",
             }
@@ -167,7 +175,7 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
         {
             header = "Tomato",
             icon = "tomato",
-            txt = "Cut the tomato into pieces",
+            txt = "Red cherry tomato",
             params = {
                 event = "ok1ez-burgershot:client:gettomato",
             }
@@ -175,7 +183,7 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
         {
             header = "Lettuce",
             icon = "lettuce",
-            txt = "Cut the lettuce into pieces",
+            txt = "Probly the only green you will eat",
             params = {
                 event = "ok1ez-burgershot:client:getlettuce",
             }
@@ -183,7 +191,7 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
         {
             header = "Potato",
             icon = "potato",
-            txt = "Cut the potato into pieces",
+            txt = "From a normal potato to perfect fries",
             params = {
                 event = "ok1ez-burgershot:client:getpotato",
             }
@@ -191,7 +199,7 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
         {
             header = "Onion",
             icon = "onion",
-            txt = "Cut the potato into pieces",
+            txt = "Who likes onions?",
             params = {
                 event = "ok1ez-burgershot:client:getonion",
             }
