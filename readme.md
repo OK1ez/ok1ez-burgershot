@@ -128,3 +128,28 @@ Copy this snippet and past it here. **qb-smallresources/config/ConsumablesDrink*
     ["sprite-softdrink"] = math.random(25, 35),
     ["fanta-softdrink"] = math.random(25, 35),
 ```
+
+### Step 5: 
+Copy this snippet and past it here. **qb-core/shared/jobs** 
+
+```lua
+    ['burgershot'] = {
+        label = 'Bugershot',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Employee',
+                payment = 500
+            },
+			['1'] = {
+                name = 'Chef',
+                payment = 650
+            },
+            ['2'] = {
+                name = 'Manager',
+                payment = 750
+            },
+        },
+    },
+```
