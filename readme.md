@@ -77,6 +77,11 @@ QBCore.Functions.CreateUseableItem("meatfree", function(source, item)
 	if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
     TriggerClientEvent("consumables:client:Eat", source, item.name)
 end)
+QBCore.Functions.CreateUseableItem("fries", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
+    TriggerClientEvent("consumables:client:Eat", source, item.name)
+end)
 ```
 
 ### Step 3: 
@@ -117,6 +122,7 @@ Copy this snippet and past it here. **qb-smallresources/config/ConsumablesEat**
     ["torpedo"] = math.random(35, 40),
     ["heartstopper"] = math.random(75, 95),
     ["meatfree"] = math.random(35, 40),
+    ["fries"] = math.random(25, 35),
 ```
 
 ### Step 4: 
@@ -142,7 +148,7 @@ Copy this snippet and past it here. **qb-core/shared/jobs**
                 name = 'Employee',
                 payment = 500
             },
-	    ['1'] = {
+	        ['1'] = {
                 name = 'Chef',
                 payment = 650
             },
