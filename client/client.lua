@@ -161,7 +161,7 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
             icon = "rawpatty",
             txt = "Raw meat perfect for burger",
             params = {
-                event = "ok1ez-burgershot:client:getbun",
+                event = "ok1ez-burgershot:client:getrawpatty",
             }
         },
         {
@@ -533,6 +533,26 @@ RegisterNetEvent('ok1ez-burgershot:client:makemeetfree', function()
             QBCore.Functions.Notify(Lang:t("error.missingingredients"), 'error')
         end
 end)
+
+RegisterNetEvent('ok1ez-burgershot:client:getrawpatty', function(data) 
+    local dialog = exports['qb-input']:ShowInput({
+        header = "Raw Patty",
+        submitText = "Confirm",
+        inputs = {
+            {
+                text = "Amount", -- text you want to be displayed as a place holder
+                name = "amount", -- name of the input should be unique otherwise it might override
+                type = "number", -- type of the input - number will not allow non-number characters in the field so only accepts 0-9
+                isRequired = true, -- Optional [accepted values: true | false] but will submit the form if no value is inputted
+                default = 1, -- Default number option, this is optional
+            }
+        },
+    })
+    if dialog then
+		TriggerServerEvent('ok1ez-burgershot:server:getrawpatty', tonumber(dialog["amount"]))
+        TriggerEvent('ok1ez-burgershot:client:getingredients')
+    end
+end, false)
 
 RegisterNetEvent('ok1ez-burgershot:client:getbun', function(data) 
     local dialog = exports['qb-input']:ShowInput({
