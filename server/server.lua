@@ -133,7 +133,12 @@ RegisterNetEvent('ok1ez-burgershot:server:makemeetfree', function()
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["meatfree"], "add")
 end)
 
-
+RegisterNetEvent('ok1ez-burgershot:server:getrawpatty', function(amount) 
+	local src = source 
+	local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.AddItem("rawpatty", amount)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["rawpatty"], "add")
+end)
 
 RegisterNetEvent('ok1ez-burgershot:server:getbun', function(amount) 
 	local src = source 
