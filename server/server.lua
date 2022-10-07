@@ -175,6 +175,13 @@ RegisterNetEvent('ok1ez-burgershot:server:getonion', function(amount)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["onion"], "add")
 end)
 
+RegisterNetEvent('ok1ez-burgershot:server:getcheddar', function(amount) 
+	local src = source 
+	local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.AddItem("cheddar", amount)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["cheddar"], "add")
+end)
+
 RegisterNetEvent('ok1ez-burgershot:server:getcola', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)

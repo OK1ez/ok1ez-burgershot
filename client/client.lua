@@ -204,6 +204,14 @@ RegisterNetEvent('ok1ez-burgershot:client:getingredients', function()
                 event = "ok1ez-burgershot:client:getonion",
             }
         },
+        {
+            header = "Cheddar",
+            icon = "cheddar",
+            txt = "Everyone loves cheddar",
+            params = {
+                event = "ok1ez-burgershot:client:getcheddar",
+            }
+        },
 
     }
     exports['qb-menu']:openMenu(openMenu)
@@ -650,6 +658,26 @@ RegisterNetEvent('ok1ez-burgershot:client:getonion', function(data)
     })
     if dialog then
 		TriggerServerEvent('ok1ez-burgershot:server:getonion', tonumber(dialog["amount"])) 
+        TriggerEvent('ok1ez-burgershot:client:getingredients')
+    end
+end, false)
+
+RegisterNetEvent('ok1ez-burgershot:client:getcheddar', function(data) 
+    local dialog = exports['qb-input']:ShowInput({
+        header = "Cheddar",
+        submitText = "Confirm",
+        inputs = {
+            {
+                text = "Amount", -- text you want to be displayed as a place holder
+                name = "amount", -- name of the input should be unique otherwise it might override
+                type = "number", -- type of the input - number will not allow non-number characters in the field so only accepts 0-9
+                isRequired = true, -- Optional [accepted values: true | false] but will submit the form if no value is inputted
+                default = 1, -- Default number option, this is optional
+            }
+        },
+    })
+    if dialog then
+		TriggerServerEvent('ok1ez-burgershot:server:getcheddar', tonumber(dialog["amount"])) 
         TriggerEvent('ok1ez-burgershot:client:getingredients')
     end
 end, false)
