@@ -928,6 +928,7 @@ for k, v in pairs(Config.Locations["soda"]) do
                 event = "ok1ez-burgershot:client:drinks",
                 icon = "fas fa-circle",
                 label = Lang:t("target.drinks"),
+		job = "burgershot",
             },
         },
         distance = 1.3
@@ -947,6 +948,7 @@ for k, v in pairs(Config.Locations["makeburger"]) do
                 event = "ok1ez-burgershot:client:makeburger",
                 icon = "fas fa-burger",
                 label = Lang:t("target.burger"),
+		job = "burgershot",
             },
         },
         distance = 1.3
@@ -966,6 +968,7 @@ for k, v in pairs(Config.Locations["cutingredients"]) do
                 event = "ok1ez-burgershot:client:cutingredients",
                 icon = "fas fa-circle",
                 label = Lang:t("target.ingredients"),
+		job = "burgershot",
             },
         },
         distance = 1.3
@@ -985,6 +988,7 @@ for k, v in pairs(Config.Locations["fridge"]) do
                 event = "ok1ez-burgershot:client:fridge",
                 icon = "fas fa-circle",
                 label = Lang:t("target.fridge"),
+		job = "burgershot",					
             },
         },
         distance = 1.3
