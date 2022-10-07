@@ -990,4 +990,24 @@ for k, v in pairs(Config.Locations["fridge"]) do
         distance = 1.3
     })
 end
+for k, v in pairs(Config.Locations["duty"]) do
+    exports['qb-target']:AddBoxZone("Duty_"..k, vector3(v.x, v.y, v.z), 3.1, 1, {
+        name = "Duty_"..k,
+        heading = 305,
+        debugPoly = Config.Debug,
+        minZ = v.z - 0.6,
+        maxZ = v.z + 1.2,
+    }, {
+        options = {
+            {
+                type = "server",
+                event = "QBCore:ToggleDuty",
+                icon = "fas fa-circle",
+                label = Lang:t("target.duty"),
+                job = "burgershot",
+            },
+        },
+        distance = 1.5
+    })
+end
 end)

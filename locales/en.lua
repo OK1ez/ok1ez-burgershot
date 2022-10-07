@@ -53,6 +53,7 @@ local Translations = {
         ["ingredients"] = "Cut Ingredients",
         ["burger"] = "Make Burger",
         ["fridge"] = "Open Fridge",
+        ["duty"] = "On/Off Duty",
     },
     menu = {
         ["close"] = "Close",
