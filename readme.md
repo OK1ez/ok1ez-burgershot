@@ -8,7 +8,7 @@ An extremely simple burgershot script.
 * [qb-target](https://github.com/BerkieBb/qb-target)
 * [qb-menu](https://github.com/qbcore-framework/qb-menu)
 * [qb-input](https://github.com/qbcore-framework/qb-input)
-* [polyzone](https://github.com/qbcore-framework/PolyZone)
+* [polyzone](https://github.com/mkafrin/PolyZone)
 
 ### Support me
 * [ko-fi](https://ko-fi.com/ok1ez)
