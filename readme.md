@@ -1,4 +1,3 @@
-![Burgir](https://cdn.discordapp.com/attachments/972866844098723872/1026859307800735875/169409382-9c2c1478-2c48-45a9-a3c6-e9167f741efc.png)
 
 
 An extremely simple burgershot script.
